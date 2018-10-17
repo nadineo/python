@@ -122,3 +122,22 @@ else:
     print("Invalid n")
 
 
+
+
+# To find the private key (d) the two prime numbers p and q has to be calculated from the public key (n). This was achieved by:
+#  - creating a list of prime numbers with sqrt(n) entries
+#  - start parsing this list for a prime number p that divides n without a rest
+#   (n%p == 0) - starting from the square root of n (sqrt(n)) in descending way
+#  - is p found then q can be easily calculated by: n/q
+#  - with p and q phi can be calculated 
+#  - the last step is finding the multiplicative inverse from e and phi which gives as result the private key d
+#  - calling the decrypt function with the private key (d, n) decrypts the message.
+ 
+#  -----------------------------------------------------------------
+#  Problems with simple RSA implementation
+ 
+#  As this example shows, by selecting a very low number of n the primefacorization can be done very easily and the private key can be found very easily. 
+ 
+#  -----------------------------------------------------------------
+
+ 
