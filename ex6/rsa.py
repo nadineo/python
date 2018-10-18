@@ -119,7 +119,7 @@ if __name__ == '__main__':
         sys.exit(1)
 
     message = sys.argv[1]
-
+    
     public, private = generate_keypair()
 
     print("Public key: ", public)
